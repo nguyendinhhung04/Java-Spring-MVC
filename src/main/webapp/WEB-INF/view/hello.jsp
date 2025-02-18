@@ -9,6 +9,9 @@
 
 <body>
     Hello from JSP
+    <h1>
+        ${eric}
+    </h1>
 </body>
 
 </html>
