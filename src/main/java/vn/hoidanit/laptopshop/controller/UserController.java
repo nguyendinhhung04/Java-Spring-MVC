@@ -21,6 +21,7 @@ public class UserController {
     public String getHomePage(Model model) {
         String test = this.userService.handleHello();
         model.addAttribute("eric", test);
+
         return "hello";
     }
 }
