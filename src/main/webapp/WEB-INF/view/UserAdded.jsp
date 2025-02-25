@@ -28,7 +28,22 @@
                 <h1>
                     Hello
                 </h1>
-                <button class="button">Submit</button>
+                <h2>
+                    ${email}
+                </h2>
+                <h2>
+                    ${password}
+                </h2>
+
+                <h2>
+                    ${fullname}
+                </h2>
+                <h2>
+                    ${address}
+                </h2>
+                <h2>
+                    ${phone}
+                </h2>
             </body>
 
             </html>
