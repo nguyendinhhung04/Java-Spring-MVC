@@ -1,9 +1,19 @@
 package vn.hoidanit.laptopshop.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "user")
 public class User {
 
     public static Long UserCount = 0L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     Long Id;
     String Email;
     String Password;
