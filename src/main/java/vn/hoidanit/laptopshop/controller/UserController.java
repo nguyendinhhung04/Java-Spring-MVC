@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 import vn.hoidanit.laptopshop.service.UserService;
 
 import vn.hoidanit.laptopshop.domain.User;
+import vn.hoidanit.laptopshop.repository.UserRepository;
 
 @Controller
 public class UserController {
 
-    private UserService userService;
+    private final UserService userService;
 
     public UserController(UserService userService) {
         this.userService = userService;
@@ -36,6 +37,9 @@ public class UserController {
 
     @RequestMapping(value = "/admin/user/create", method = RequestMethod.POST)
     public String getUserPage(Model model, @ModelAttribute("newUser") User hoidanit) {
+
+        userService.handleSaveUser(hoidanit);
+
         model.addAttribute("email", hoidanit.getEmail());
         model.addAttribute("password", hoidanit.getPassword());
         model.addAttribute("fullname", hoidanit.getFullname());

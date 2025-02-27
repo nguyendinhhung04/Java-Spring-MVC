@@ -10,11 +10,9 @@ import jakarta.persistence.Table;
 @Table(name = "user")
 public class User {
 
-    public static Long UserCount = 0L;
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    Long Id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long Id;
     String Email;
     String Password;
     String Fullname;
