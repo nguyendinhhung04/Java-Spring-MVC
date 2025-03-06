@@ -12,59 +12,59 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
-    String Email;
-    String Password;
-    String Fullname;
-    String Address;
-    String Phone;
+    Long id;
+    String email;
+    String password;
+    String fullname;
+    String address;
+    String phone;
 
     public void setId(Long id) {
-        this.Id = id;
+        this.id = id;
     }
 
     public Long getId() {
-        return this.Id;
+        return this.id;
     }
 
     public void setEmail(String email) {
-        this.Email = email;
+        this.email = email;
     }
 
     public String getEmail() {
-        return this.Email;
+        return this.email;
     }
 
     public void setFullname(String fname) {
-        this.Fullname = fname;
+        this.fullname = fname;
     }
 
     public String getFullname() {
-        return this.Fullname;
+        return this.fullname;
     }
 
     public void setAddress(String address) {
-        this.Address = address;
+        this.address = address;
     }
 
     public String getAddress() {
-        return this.Address;
+        return this.address;
     }
 
     public void setPhone(String phone) {
-        this.Phone = phone;
+        this.phone = phone;
     }
 
     public String getPhone() {
-        return this.Phone;
+        return this.phone;
     }
 
     public void setPassword(String password) {
-        this.Password = password;
+        this.password = password;
     }
 
     public String getPassword() {
-        return this.Password;
+        return this.password;
     }
 
     public void UserAdded() {
@@ -73,6 +73,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "Hello";
+        return "User [id=" + id + ", email=" + email + ", password=" + password + ", fullName=" + fullname
+                + ", address=" + address + ", phone=" + phone + "]";
     }
 }

@@ -25,11 +25,11 @@ public class UserService {
     }
 
     public List<User> getAllUsersByEmail(String email) {
-        return this.userRepository.findOneByEmail(email);
+        return this.userRepository.findByEmail(email);
     }
 
-    public List<User> getAllUsers() {
-        return this.userRepository.findAll();
-    }
+    // public List<User> getAllUsers() {
+    // return this.userRepository.findAll();
+    // }
 
 }
