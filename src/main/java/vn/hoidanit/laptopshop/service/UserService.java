@@ -28,8 +28,12 @@ public class UserService {
         return this.userRepository.findByEmail(email);
     }
 
-    // public List<User> getAllUsers() {
-    // return this.userRepository.findAll();
-    // }
+    public List<User> getAllUser() {
+        return this.userRepository.findAll();
+    }
+
+    public User getUserById(Long id) {
+        return this.userRepository.findOneById(id);
+    }
 
 }

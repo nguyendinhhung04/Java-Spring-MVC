@@ -20,30 +20,25 @@
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
                 <!-- <link href="/css/demo.css" rel="stylesheet"> -->
 
-                <link href="/css/demo.css" rel="stylesheet">
             </head>
 
             <body>
-                Hello from JSP
-                <h1>
-                    Hello
-                </h1>
-                <h2>
-                    ${email}
-                </h2>
-                <h2>
-                    ${password}
-                </h2>
+                <div class="container mt-5">
+                    <h1>
+                        ${user.fullname}
+                    </h1>
+                    <p>ID: ${user.id}</p>
+                    <p>Phone: ${user.phone}</p>
+                    <p>Email: ${user.email}</p>
+                    <p>Address: ${user.address}</p>
 
-                <h2>
-                    ${fullname}
-                </h2>
-                <h2>
-                    ${address}
-                </h2>
-                <h2>
-                    ${phone}
-                </h2>
+                </div>
+
+                <div class="container mt-5">
+                    <a href="/admin/user/view">
+                        <button class="btn btn-success">Back</button>
+                    </a>
+                </div>
             </body>
 
             </html>
